@@ -1,0 +1,154 @@
+<html>
+<head>
+    <title>Hubble Facts</title>
+    <style>
+        html, body {
+    height: 100%; /* Ensures the body takes full viewport height */
+    margin: 0; /* Resets default margin */
+    overflow: hidden; /* Hides scrollbars */
+}
+
+/* Specific rule for webkit browsers to hide scrollbars */
+body::-webkit-scrollbar {
+    display: none;
+}
+         .animated-text {
+            position: absolute;
+            top: 10%;
+            right: 40.3%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards, blinkText 7s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blinkText {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+        body {
+            background-image: url(facts-image.jpg);
+            overflow: auto;
+            color: white;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+        .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px white; /* Gives a little glow effect */
+            animation: move 50s linear infinite;
+        }
+        @keyframes move {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-1000px); /* Adjusts the movement distance */
+            }
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <div class="header"><center><u><h1>HUBBLE-facts</h1></u>
+        <br>
+        <hr>
+        <h2>Here are some interesting facts about the cosmos</h2>
+        <table border="1" style="border: 2px solid white;">
+            <tr>
+                <th><img src="101.jpeg"></th>
+                <th>Infinite Space: The universe is vast and ever-expanding, containing billions of galaxies, each with billions of stars. Despite our advanced technology, we've only scratched the surface of its immensity.</th>
+            </tr>
+            <tr>
+                <th><img src="102.jpeg"></th>
+                <th>Time Dilation: According to Einstein's theory of relativity, time slows down in strong gravitational fields or at near-light speeds. This means that time can pass at different rates depending on your location and speed relative to other objects in space.</th>
+            </tr>
+            <tr>
+                <th><img src="103.jpeg"></th>
+                <th>Black Holes: These cosmic entities have gravitational pulls so strong that not even light can escape from them. They are formed when massive stars collapse under their own gravity, creating a singularity with infinite density at their core.</th>
+            </tr>
+            <tr>
+                <th><img src="103.jpeg"></th>
+                <th>Black Holes: These cosmic entities have gravitational pulls so strong that not even light can escape from them. They are formed when massive stars collapse under their own gravity, creating a singularity with infinite density at their core.</th>
+            </tr>
+            <tr>
+                <th><img src="104.jpeg"></th>
+                <th>Exoplanets: Thanks to advances in telescope technology, astronomers have discovered thousands of planets orbiting stars beyond our solar system. Some of these exoplanets are in the "habitable zone," where conditions might be suitable for life as we know it.</th>
+            </tr>
+            <tr>
+                <th><img src="105.jpeg"></th>
+                <th>Neutron Stars: These incredibly dense remnants of massive stars are only a few kilometers in diameter but contain more mass than the Sun. They can r</th>
+            </tr>
+            <tr>
+                <th><img src="106.jpeg"></th>
+                <th>Multiverse Theory: Some theoretical physicists propose the existence of multiple universes, each with its own set of physical laws and constants. This idea remains speculative but offers a fascinating glimpse into the possibilities of cosmic existence.</th>
+            </tr>
+            <tr>
+                <th><img src="107.jpeg"></th>
+                <th>Quantum Entanglement: This phenomenon, where particles become correlated in such a way that the state of one particle instantaneously influences the state of another, challenges our understanding of space, time, and causality.</th>
+            </tr>
+            <tr>
+                <th><img src="109.jpg"height=150px width=305px></th>
+                <th>Apophis, a near-Earth asteroid, poses a potential threat as it swings close to our planet, highlighting the importance of continued asteroid monitoring and planetary defense efforts.</th>
+            </tr>
+            <tr>
+                <th><img src="110.jpeg"height=150px width=305px></th>
+                <th>Supernovas, the explosive deaths of massive stars, unleash energy equivalent to billions of suns, shaping the cosmos and seeding it with elements essential for life.</th>
+            </tr>
+            <tr>
+                <th><img src="111.jpeg"height=150px width=305px></th>
+                <th>Nebulas, the cosmic clouds of gas and dust, serve as the birthplace of stars, where gravity and stellar winds sculpt stunning cosmic vistas.</th>
+            </tr>
+            <tr>
+                <th><img src="112.jpeg"height=150px width=305px></th>
+                <th>The Big Bang theory proposes that the universe originated from an immensely hot and dense state around 13.8 billion years ago, expanding rapidly to form the cosmos we know today.</th>
+            </tr>
+            
+
+        </table>
+    </center></div>
+
+
+    <!-- Animated text -->
+    <a href="welcome.php" target="_top" class="no-underline" style="color: white;"><div class="animated-text">Discover the universe with Hubble.</div></a>
+    
+</body>
+<script>
+    // Generate 100 stars
+    for (let i = 0; i < 400; i++) {
+        let star = document.createElement("div");
+        star.className = "stars";
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.top = Math.random() * window.innerHeight + "px";
+        star.style.animationDuration = (Math.random() * 100 + 50) + "s"; // Randomize animation speed
+        star.style.animationDelay = -(Math.random() * 100) + "s"; // Randomize initial animation phase
+        document.body.appendChild(star);
+    }
+</script>
+</html>

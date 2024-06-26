@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <style>
+         img:hover{
+            transform: scale(1.1);
+            padding: auto;
+            transition: all 500ms;
+        }
+        .image-box {
+    background-color: white;
+    padding: 2px;
+    display: inline-block;
+    margin: 1px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    box-sizing: border-box;
+    transition: all 500ms;
+}
+
+.image-box img {
+    display: block;
+    margin: 0;
+    transition: all 500ms;
+}
+        body {
+            background-color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            overflow: hidden; /* Prevents scrolling */
+            position: relative;
+            margin: 0; /* Ensures there are no default margins */
+            height: 100vh; /* Full view height */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+        }
+        h2, h3 {
+            color: white;
+        }
+        .footer {
+            margin-top: auto; /* Pushes the footer to the bottom */
+            width: 100%;
+            font-size: small;
+            text-align: center;
+            position: relative; /* Changed from absolute to relative */
+        }
+        .no-underline {
+            text-decoration: none;
+        }
+        hr {
+            color: white;
+        }
+        .stars {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px white; /* Gives a little glow effect */
+            animation: move 50s linear infinite;
+        }
+        @keyframes move {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-1000px); /* Adjusts the movement distance */
+            }
+        }
+    </style>
+</head>
+<body>
+        <audio autoplay loop>
+            <source src="background-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    <div align="left">
+        <h2>Navigate</h2>
+        <br>
+        <hr>
+        <a href="welcome.php" target="_top" class="no-underline"><h3>Home</h3></a>
+        <hr>
+        <a href="login_1.php" target="_top" class="no-underline"><h3>Log out</h3></a>
+        <hr>
+        <a href="https://stellarium-web.org/" target="_top" class="no-underline"><h3>Stellarium</h3></a>
+        <a href="https://stellarium-web.org/" target="_top" class="no-underline"><div class="image-box"><img src="stellarium-logo.jpg" alt="Stellarium" height="100px" width="140px"></div></a>
+        <hr>
+        <a href="index.html" target="_top" class="no-underline"><h3>Solar System</h3></a>
+        <a href="index.html" target="_top" class="no-underline"><div class="image-box"><img src="solar-system.jpg" alt="Stellarium" height="100px" width="140px"></div></a>
+        <hr>
+        <a href="about.html" target="_top" class="no-underline"><h3>about</h3></a>
+        <hr>
+    </div>
+    <div class="footer">
+        <p>&copy; created by Deep Dey</p>
+    </div>
+
+    <script>
+        // Generate 100 stars
+        for (let i = 0; i < 500; i++) {
+            let star = document.createElement("div");
+            star.className = "stars";
+            star.style.left = Math.random() * window.innerWidth + "px";
+            star.style.top = Math.random() * window.innerHeight + "px";
+            star.style.animationDuration = (Math.random() * 100 + 50) + "s"; // Randomize animation speed
+            star.style.animationDelay = -(Math.random() * 100) + "s"; // Randomize initial animation phase
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>

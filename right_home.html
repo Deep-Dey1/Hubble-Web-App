@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hubble</title>
+    <style>
+        html, body {
+    height: 100%; /* Ensures the body takes full viewport height */
+    margin: 0; /* Resets default margin */
+    overflow: hidden; /* Hides scrollbars */
+}
+
+/* Specific rule for webkit browsers to hide scrollbars */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+        img:hover{
+            transform: scale(1.1);
+            padding: auto;
+            transition: all 1000ms;
+        }
+        body {
+            background-image: url("background_real.gif");
+            overflow: auto;
+            color: white;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Existing style adjustments and additions */
+.image-box {
+    transition: all 500ms;
+    background-color: white;
+    padding: 2px;
+    display: inline-block;
+    margin: 1px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.image-box img {
+    display: block;
+    margin: 0;
+    transition: all 500ms;
+}
+
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 9%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1; /* Ensure content is above the video */
+        }
+
+        .para{
+            background: rgba(0, 0, 0, 0);
+            position:inherit;
+            top: 4%;
+            padding: 6%;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .table{
+            top: 2%;
+            background: rgba(0, 0, 0, 0);
+
+        }
+
+        .animated-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards, blinkText 5s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blinkText {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video background -->
+
+
+    <!-- Content -->
+    <div class="content">
+        <u><h1 style="font-size: 45px;">HUBBLE</h1></u>
+    </div>
+    <div class = "para">
+        <center><p style="size:20px;">Welcome to HUBBLE, your celestial gateway to the wonders of the cosmos! Embark on a journey through the vast expanse of space and time, where galaxies twinkle like diamonds in the velvet sky and stars whisper tales of ancient mysteries. Our website is more than just a digital observatory, it's a sanctuary for stargazers, astronomers, and dreamers alike. Dive into the depths of the universe, where each click unveils a new constellation of knowledge and discovery. Whether you're a seasoned astronomer seeking to unravel the secrets of the cosmos or a curious soul eager to explore the beauty of the night sky, HUBBLE invites you to ignite your passion for astronomy and embark on an odyssey beyond imagination.</p></center>
+        <center><h2>Explore the universe !</h2>
+    </div><hr >
+    <div class="table">
+       <center> 
+            <table border = "0">
+                 <tr>
+                    <th><p>Reserchers</p></th>
+                    <th><p>Local Objects</p></th>
+                    <th><p>Facts</p></th>
+                    <th><p>Images</p></th>
+                </tr>
+                <tr>
+                    <th><a href="reserchers.html"><div class="image-box"><img src="scientists.jpeg" alt="scientists" height="160" width="200"></div></a></th>
+                    <th><a href="local.html"><div class="image-box"><img src="i5.jpeg" alt="Moon" height="160" width="180"></div></a></th>
+                    <th><a href="facts.html"><div class="image-box"><img src="facts.jpeg" alt="facts" height="160" width="200"></div></a></th>
+                    <th><a href="images.html"><div class="image-box"><img src="images_nebula.jpeg" alt="images" height="160" width="200"></div></a></th>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+    <!-- Animated text -->
+    <div class="animated-text">Discover the universe with Hubble.</div>
+</body>
+</html>
